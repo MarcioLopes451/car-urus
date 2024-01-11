@@ -4,7 +4,7 @@ import Hotel from "../../../images/8541880_hotel_icon.png";
 
 export default function Navbar() {
   return (
-    <div className="bg-[#9F4A54] w-full h-[340px] text-white font-Inria-Serif relative">
+    <div className="bg-[#9F4A54] w-full h-[340px] text-white font-Inria-Serif z-[1]">
       <div className="flex justify-between items-center px-[40px] pt-8">
         <h1 className="font-bold text-2xl">Car-Urus</h1>
         <img src={User} className="w-[40px] h-[40px]" />
