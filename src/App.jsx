@@ -1,14 +1,9 @@
-import "./App.css";
-import { carData } from "../data/data";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <div>
-      {carData.map((a, i) => (
-        <div key={i}>
-          <img src={a.images} className="w-[200px]" />
-        </div>
-      ))}
+      <Navbar />
     </div>
   );
 }
