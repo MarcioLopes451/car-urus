@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 import { carData } from "../../../data/carData";
 import CarNav from "../Navbar/CarNav";
 import Manual from "../../../images/9081001_manual_gearbox_icon.png";
@@ -7,8 +8,17 @@ import Seats from "../../../images/9035117_person_icon.png";
 import LargeBag from "../../../images/6811947_bag_baggage_journey_luggage_suitcase_icon.png";
 import SmallBag from "../../../images/6811939_bag_baggage_duffle bag_journey_luggage_icon.png";
 import Miles from "../../../images/medium.png";
+import Tick from "../../../images/8541612_check_tick_mark_icon.png";
+import Keychain from "../../../images/37052_keychain_password_access_car keys_keys_icon.png";
+import TotalPrice from "../TotalPrice/TotalPrice";
 
 export default function SelectedCar() {
+  const [state, setState] = useState(false);
+
+  const openReviews = () => {
+    setState(!state);
+  };
+
   const { id } = useParams();
   const productData = carData.find((data) => data.id === parseInt(id, 10));
   if (!productData) throw new Error(`404: product not found: ${id}`);
@@ -27,16 +37,15 @@ export default function SelectedCar() {
     "Nov",
     "Dec",
   ];
-
   const currentDate = new Date();
   const dayOfWeek = daysOfWeek[currentDate.getDay()];
   const dayOfMonth = currentDate.getDate();
   const month = months[currentDate.getMonth()];
-
   const currentTime = currentDate.toLocaleTimeString([], {
     hour: "2-digit",
     minute: "2-digit",
   });
+
   return (
     <>
       <CarNav />
@@ -60,7 +69,7 @@ export default function SelectedCar() {
         <div className="mt-5 mx-[30px]">
           <h2 className="font-bold text-2xl">Your Car deal</h2>
           <div className="flex justify-between items-start flex-col">
-            <div className="bg-[#C9C9C9] rounded">
+            <div>
               <img src={productData.images} className="w-[350px] h-[250px]" />
             </div>
             <div className="bg-[#ebebeb] w-full rounded -mt-2 p-2">
@@ -126,6 +135,45 @@ export default function SelectedCar() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="mt-5 mx-[30px]">
+          <h2 className="font-semibold text-2xl">Perks:</h2>
+          <div className="flex justify-between">
+            <div className="flex flex-col items-start gap-2">
+              {productData.extraDetails.perks.map((perk) => (
+                <div key={perk} className="flex gap-2 items-center">
+                  <img src={Tick} className="w-[20px] h-[20px]" />
+                  <p>{perk}</p>
+                </div>
+              ))}
+            </div>
+            <img src={Keychain} className="w-[150px] h-[150px]" />
+          </div>
+        </div>
+        <TotalPrice />
+        <div className="mt-5 mx-[30px]">
+          <button className="bg-[#0370EF] w-full h-12 rounded-lg text-white font-bold">
+            Continue to book
+          </button>
+        </div>
+        <div className="mt-5 mx-[30px]">
+          <button
+            className="bg-[#0370EF] w-40 h-10 rounded-lg text-white font-bold"
+            onClick={openReviews}
+          >
+            Open Reviews
+          </button>
+          {state && (
+            <div className="flex flex-col items-start gap-3 mt-5">
+              {productData.extraDetails.reviews.map((review) => (
+                <div key={review}>
+                  <p className="font-semibold">{review.user}:</p>
+                  <p>{review.comment}</p>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </>

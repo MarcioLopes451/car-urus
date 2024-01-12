@@ -52,6 +52,8 @@ export const carData = [
         "Unlimited Mileage",
         "Theft Protection",
         "Collision Damage Waiver",
+        "Third Party Liability",
+        "Free Cancellation"
       ],
     },
   },
@@ -92,6 +94,8 @@ export const carData = [
         "Unlimited Mileage",
         "Theft Protection",
         "Collision Damage Waiver",
+        "Third Party Liability",
+        "Free Cancellation"
       ],
     },
   },
@@ -132,6 +136,8 @@ export const carData = [
         "Unlimited Mileage",
         "Theft Protection",
         "Collision Damage Waiver",
+        "Third Party Liability",
+        "Free Cancellation"
       ],
     },
   },
@@ -172,6 +178,8 @@ export const carData = [
         "Unlimited Mileage",
         "Theft Protection",
         "Collision Damage Waiver",
+        "Third Party Liability",
+        "Free Cancellation"
       ],
     },
   },
@@ -212,6 +220,8 @@ export const carData = [
         "Unlimited Mileage",
         "Theft Protection",
         "Collision Damage Waiver",
+        "Third Party Liability",
+        "Free Cancellation"
       ],
     },
   },
@@ -252,6 +262,8 @@ export const carData = [
         "Unlimited Mileage",
         "Theft Protection",
         "Collision Damage Waiver",
+        "Third Party Liability",
+        "Free Cancellation"
       ],
     },
   },
@@ -292,6 +304,8 @@ export const carData = [
         "Unlimited Mileage",
         "Theft Protection",
         "Collision Damage Waiver",
+        "Third Party Liability",
+        "Free Cancellation"
       ],
     },
   },
@@ -332,6 +346,8 @@ export const carData = [
         "Unlimited Mileage",
         "Theft Protection",
         "Collision Damage Waiver",
+        "Third Party Liability",
+        "Free Cancellation"
       ],
     },
   },
@@ -372,6 +388,8 @@ export const carData = [
         "Unlimited Mileage",
         "Theft Protection",
         "Collision Damage Waiver",
+        "Third Party Liability",
+        "Free Cancellation"
       ],
     },
   },
@@ -412,6 +430,8 @@ export const carData = [
         "Unlimited Mileage",
         "Theft Protection",
         "Collision Damage Waiver",
+        "Third Party Liability",
+        "Free Cancellation"
       ],
     },
   },
@@ -452,6 +472,8 @@ export const carData = [
         "Unlimited Mileage",
         "Theft Protection",
         "Collision Damage Waiver",
+        "Third Party Liability",
+        "Free Cancellation"
       ],
     },
   },
@@ -492,6 +514,8 @@ export const carData = [
         "Unlimited Mileage",
         "Theft Protection",
         "Collision Damage Waiver",
+        "Third Party Liability",
+        "Free Cancellation"
       ],
     },
   },
@@ -532,6 +556,8 @@ export const carData = [
         "Unlimited Mileage",
         "Theft Protection",
         "Collision Damage Waiver",
+        "Third Party Liability",
+        "Free Cancellation"
       ],
     },
   },
@@ -572,6 +598,8 @@ export const carData = [
         "Unlimited Mileage",
         "Theft Protection",
         "Collision Damage Waiver",
+        "Third Party Liability",
+        "Free Cancellation"
       ],
     },
   },
@@ -612,6 +640,8 @@ export const carData = [
         "Unlimited Mileage",
         "Theft Protection",
         "Collision Damage Waiver",
+        "Third Party Liability",
+        "Free Cancellation"
       ],
     },
   },

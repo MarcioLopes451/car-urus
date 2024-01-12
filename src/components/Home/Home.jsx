@@ -1,4 +1,5 @@
 import { carData } from "../../../data/carData";
+import { Link } from "react-router-dom";
 import Automatic from "../../../images/automatic-transmission.png";
 import Seats from "../../../images/9035117_person_icon.png";
 import LargeBag from "../../../images/6811947_bag_baggage_journey_luggage_suitcase_icon.png";
@@ -78,9 +79,11 @@ export default function Home() {
                   <div>
                     <p className="opacity-70">Price for 1 day</p>
                     <p className="font-bold">£{car.price.perDay}</p>
-                    <button className="bg-[#0370EF] w-40 h-10 rounded-lg text-white font-bold">
-                      View Deal
-                    </button>
+                    <Link key={car.id} to={`/car-urus/cars/${car.id}`}>
+                      <button className="bg-[#0370EF] w-40 h-10 rounded-lg text-white font-bold">
+                        View Deal
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
