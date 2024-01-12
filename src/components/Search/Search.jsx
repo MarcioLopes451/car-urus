@@ -1,5 +1,6 @@
 //import React from "react";
 import Searching from "../../../images/2931184_normal_regular_zoom_glass_magnifier_icon.png";
+import { Link } from "react-router-dom";
 
 export default function Search() {
   const currentDate = new Date().toISOString().split("T")[0];
@@ -47,10 +48,12 @@ export default function Search() {
             </div>
           </div>
         </div>
-        <button className="bg-[#0370EF] w-full h-10 rounded-sm text-white font-semibold">
-          {" "}
-          Search
-        </button>
+        <Link to="/car-urus/cars">
+          <button className="bg-[#0370EF] w-full h-10 rounded-sm text-white font-semibold">
+            {" "}
+            Search
+          </button>
+        </Link>
       </div>
     </div>
   );

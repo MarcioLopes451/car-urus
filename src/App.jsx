@@ -1,14 +1,17 @@
+import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
-import Navbar from "./components/Navbar/Navbar";
-import Search from "./components/Search/Search";
+import Cars from "./components/Cars/Cars";
+import SelectedCar from "./components/Cars/SelectedCar";
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <Search />
-      <Home />
+      <Routes>
+        <Route path="/car-urus/" element={<Home />} />
+        <Route path="/car-urus/cars" element={<Cars />} />
+        <Route path="/car-urus/cars/:id" element={<SelectedCar />} />
+      </Routes>
       <Footer />
     </div>
   );

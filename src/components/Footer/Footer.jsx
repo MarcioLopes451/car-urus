@@ -3,6 +3,7 @@ import Hotel from "../../../images/8541880_hotel_icon.png";
 import Instagram from "../../../images/1161953_instagram_icon (1).png";
 import Facebook from "../../../images/4552607_facebook_logo_icon.png";
 import X from "../../../images/211919_social_twitter_icon (1).png";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -10,10 +11,12 @@ export default function Footer() {
       <div className="px-[40px] pt-8 text-center">
         <h2 className="font-bold text-2xl">Car-Urus</h2>
         <div className="flex items-center justify-between px-[40px] mt-5">
-          <h3 className="font-semibold text-base flex gap-3 items-center">
-            {" "}
-            <img src={Car} className="w-[30px] h-[30px]" /> Car Rentals
-          </h3>
+          <Link to="/">
+            <h3 className="font-semibold text-base flex gap-3 items-center">
+              {" "}
+              <img src={Car} className="w-[30px] h-[30px]" /> Car Rentals
+            </h3>
+          </Link>
           <h3 className="font-semibold text-base flex gap-3 items-center">
             {" "}
             <img src={Hotel} className="w-[30px] h-[30px]" />
