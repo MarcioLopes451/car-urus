@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { carData } from "../../../data/carData";
-import CarNav from "../Navbar/CarNav";
+import CarNav from "../../components/Navbar/CarNav";
 import Manual from "../../../images/9081001_manual_gearbox_icon.png";
 import Automatic from "../../../images/automatic-transmission.png";
 import Seats from "../../../images/9035117_person_icon.png";
@@ -10,7 +10,7 @@ import SmallBag from "../../../images/6811939_bag_baggage_duffle bag_journey_lug
 import Miles from "../../../images/medium.png";
 import Tick from "../../../images/8541612_check_tick_mark_icon.png";
 import Keychain from "../../../images/37052_keychain_password_access_car keys_keys_icon.png";
-import TotalPrice from "../TotalPrice/TotalPrice";
+import TotalPrice from "../../components/TotalPrice/TotalPrice";
 
 export default function SelectedCar() {
   const [state, setState] = useState(false);

@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
-import Home from "./components/Home/Home";
-import Cars from "./components/Cars/Cars";
-import SelectedCar from "./components/Cars/SelectedCar";
+import Home from "./pages/Home/Home";
+import Cars from "./pages/Cars/Cars";
+import SelectedCar from "./pages/Cars/SelectedCar";
 
 function App() {
   return (

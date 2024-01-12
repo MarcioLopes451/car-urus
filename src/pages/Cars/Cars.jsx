@@ -1,4 +1,4 @@
-import CarNav from "../Navbar/CarNav";
+import CarNav from "../../components/Navbar/CarNav";
 import { carData } from "../../../data/carData";
 import { Link } from "react-router-dom";
 import Manual from "../../../images/9081001_manual_gearbox_icon.png";
@@ -88,7 +88,7 @@ export default function Cars() {
                 key={car.id}
                 className="flex justify-between items-start flex-col"
               >
-                <div className="bg-[#C9C9C9] rounded">
+                <div>
                   <img src={car.images} className="w-[350px] h-[250px]" />
                 </div>
                 <div className="bg-[#ebebeb] w-full rounded -mt-2 p-2">

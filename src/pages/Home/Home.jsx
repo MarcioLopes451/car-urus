@@ -5,9 +5,9 @@ import Seats from "../../../images/9035117_person_icon.png";
 import LargeBag from "../../../images/6811947_bag_baggage_journey_luggage_suitcase_icon.png";
 import SmallBag from "../../../images/6811939_bag_baggage_duffle bag_journey_luggage_icon.png";
 import Miles from "../../../images/medium.png";
-import FrequentQuestions from "./FrequentQuestions";
-import Search from "../Search/Search";
-import Navbar from "../Navbar/Navbar";
+import FrequentQuestions from "../../components/FrequentQuestions/FrequentQuestions";
+import Search from "../../components/Search/Search";
+import Navbar from "../../components/Navbar/Navbar";
 
 export default function Home() {
   return (
@@ -24,7 +24,7 @@ export default function Home() {
                 key={car}
                 className="flex justify-between items-start flex-col"
               >
-                <div className="bg-[#C9C9C9] rounded">
+                <div>
                   <img src={car.images} className="w-[350px] h-[250px]" />
                 </div>
                 <div className="bg-[#ebebeb] w-full rounded -mt-2 p-2">
