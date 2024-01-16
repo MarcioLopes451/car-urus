@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
-import { carData } from "../../../data/carData";
 import CarNav from "../../components/Navbar/CarNav";
 import Manual from "../../../images/9081001_manual_gearbox_icon.png";
 import Automatic from "../../../images/automatic-transmission.png";
@@ -11,61 +10,25 @@ import Miles from "../../../images/medium.png";
 import Tick from "../../../images/8541612_check_tick_mark_icon.png";
 import Keychain from "../../../images/37052_keychain_password_access_car keys_keys_icon.png";
 import TotalPrice from "../../components/TotalPrice/TotalPrice";
+import { useSelector } from "react-redux";
 
 export default function SelectedCar() {
   const [state, setState] = useState(false);
+  const car = useSelector((state) => state.car.cars);
+  const days = useSelector((state) => state.car.day);
 
   const openReviews = () => {
     setState(!state);
   };
 
   const { id } = useParams();
-  const productData = carData.find((data) => data.id === parseInt(id, 10));
+  const productData = car.find((data) => data.id === parseInt(id, 10));
   if (!productData) throw new Error(`404: product not found: ${id}`);
-  const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  const months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
-  const currentDate = new Date();
-  const dayOfWeek = daysOfWeek[currentDate.getDay()];
-  const dayOfMonth = currentDate.getDate();
-  const month = months[currentDate.getMonth()];
-  const currentTime = currentDate.toLocaleTimeString([], {
-    hour: "2-digit",
-    minute: "2-digit",
-  });
 
   return (
     <>
       <CarNav />
       <div className="mt-5 font-Inria-Serif">
-        <div className="mx-[30px] border-[#D2B48C] border-[6px] rounded-lg flex justify-between items-center p-3">
-          <div>
-            <h3>London City Airport</h3>
-            <div className="flex gap-2">
-              <div className="flex gap-2">
-                <p>{` ${dayOfMonth} ${month}`}</p>
-                <p>at {currentTime} </p>
-              </div>
-              <div className="flex gap-2">
-                <p>{`${dayOfMonth} ${month}`}</p>
-                <p>at {currentTime}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div className="mt-5 mx-[30px]">
           <h2 className="font-bold text-2xl">Your Car deal</h2>
           <div className="flex justify-between items-start flex-col">
@@ -130,7 +93,14 @@ export default function SelectedCar() {
                 </p>
               </div>
               <div>
-                <p className="opacity-70">Price for 1 day</p>
+                <p className="opacity-70">
+                  Price for{" "}
+                  {days === 1 ? (
+                    <span>{days} day</span>
+                  ) : (
+                    <span>{days} days</span>
+                  )}
+                </p>
                 <p className="font-bold">£{productData.price.perDay}</p>
               </div>
             </div>

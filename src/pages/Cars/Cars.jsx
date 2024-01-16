@@ -1,5 +1,5 @@
 import CarNav from "../../components/Navbar/CarNav";
-import { carData } from "../../../data/carData";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Manual from "../../../images/9081001_manual_gearbox_icon.png";
 import Automatic from "../../../images/automatic-transmission.png";
@@ -13,55 +13,15 @@ import SUV from "../../../images/4047334_auto_automobile_automotive_car_suv_icon
 import Electric from "../../../images/4801291_automobile_car_eco_electric_powered_icon.png";
 
 export default function Cars() {
-  const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  const months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
+  const cars = useSelector((state) => state.car.cars);
+  const days = useSelector((state) => state.car.day);
 
-  const currentDate = new Date();
-  const dayOfWeek = daysOfWeek[currentDate.getDay()];
-  const dayOfMonth = currentDate.getDate();
-  const month = months[currentDate.getMonth()];
-
-  const currentTime = currentDate.toLocaleTimeString([], {
-    hour: "2-digit",
-    minute: "2-digit",
-  });
   return (
     <>
       <CarNav />
       <div className="mt-5 font-Inria-Serif">
-        <div className="mx-[30px] border-[#D2B48C] border-[6px] rounded-lg flex justify-between items-center p-3">
-          <div>
-            <h3>London City Airport</h3>
-            <div className="flex gap-2">
-              <div className="flex gap-2">
-                <p>{` ${dayOfMonth} ${month}`}</p>
-                <p>at {currentTime} </p>
-              </div>
-              <div className="flex gap-2">
-                <p>{`${dayOfMonth} ${month}`}</p>
-                <p>at {currentTime}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div className="mt-5 mx-[30px]">
-          <h2 className="font-bold text-2xl">
-            Available Cars : {carData.length}
-          </h2>
+          <h2 className="font-bold text-2xl">Available Cars : {cars.length}</h2>
           <div className="mt-5">
             <div className="flex justify-between items-center">
               <div className="flex flex-col justify-center items-center">
@@ -83,7 +43,7 @@ export default function Cars() {
             </div>
           </div>
           <div className=" mt-5 flex flex-col justify-center items-center gap-5 w-full">
-            {carData.map((car) => (
+            {cars.map((car) => (
               <div
                 key={car.id}
                 className="flex justify-between items-start flex-col"
@@ -149,7 +109,14 @@ export default function Cars() {
                     </p>
                   </div>
                   <div>
-                    <p className="opacity-70">Price for 1 day</p>
+                    <p className="opacity-70">
+                      Price for{" "}
+                      {days === 1 ? (
+                        <span>{days} day</span>
+                      ) : (
+                        <span>{days} days</span>
+                      )}
+                    </p>
                     <p className="font-bold">£{car.price.perDay}</p>
                     <Link key={car.id} to={`/car-urus/cars/${car.id}`}>
                       <button className="bg-[#0370EF] w-40 h-10 rounded-lg text-white font-bold">
