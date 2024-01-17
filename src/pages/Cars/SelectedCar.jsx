@@ -121,12 +121,7 @@ export default function SelectedCar() {
             <img src={Keychain} className="w-[150px] h-[150px]" />
           </div>
         </div>
-        <TotalPrice />
-        <div className="mt-5 mx-[30px]">
-          <button className="bg-[#0370EF] w-full h-12 rounded-lg text-white font-bold">
-            Continue to book
-          </button>
-        </div>
+        <TotalPrice price={productData.price.perDay} />
         <div className="mt-5 mx-[30px]">
           <button
             className="bg-[#0370EF] w-40 h-10 rounded-lg text-white font-bold"

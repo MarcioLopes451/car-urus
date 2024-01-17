@@ -21,7 +21,7 @@ export default function Home() {
             .filter((a) => a.details.gearbox === "Automatic")
             .map((car) => (
               <div
-                key={car}
+                key={car.id}
                 className="flex justify-between items-start flex-col"
               >
                 <div>

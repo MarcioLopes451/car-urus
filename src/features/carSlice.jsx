@@ -6,6 +6,7 @@ export const carSlice = createSlice({
   initialState: {
     day: 1,
     cars: carData,
+    totalPrice: 50,
   },
   reducers: {
     updatePrice: (state, action) => {
