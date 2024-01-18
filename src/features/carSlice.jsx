@@ -1,6 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { carData } from "../../data/carData";
 
+const getCurrentDate = () => {
+  const currentDate = new Date();
+
+  const day = String(currentDate.getDate()).padStart(2, "0");
+  const month = String(currentDate.getMonth() + 1).padStart(2, "0"); // Months are zero-based
+  const year = currentDate.getFullYear();
+
+  return `${year}-${month}-${day}`;
+};
+
+const currentDate = getCurrentDate();
 export const carSlice = createSlice({
   name: "car",
   initialState: {
@@ -8,7 +19,7 @@ export const carSlice = createSlice({
     selectedCar: null,
     day: 1,
     totalPrice: 50,
-    pickupDate: "",
+    pickupDate: currentDate,
     dropoffDate: "",
     daysDifference: null,
   },

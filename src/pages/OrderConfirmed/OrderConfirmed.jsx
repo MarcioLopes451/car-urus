@@ -15,39 +15,56 @@ export default function OrderConfirmed() {
   return (
     <div>
       <CarNav />
-      <h2>Confirm Your Order</h2>
-      <p>You have selected the following car for rental:</p>
-      {cars && (
-        <div>
+      <div className="mt-5 mx-[40px] font-Inria-Serif">
+        <h2 className="font-bold text-2xl">Confirm Your Order</h2>
+        <p>You have selected the following car for rental:</p>
+        {cars && (
           <div>
-            <img src={cars.images} alt={cars.carName} />
-            <h3>{cars.carName}</h3>
-            <p>{cars.type}</p>
-            <p>Color: {cars.details.color}</p>
+            <div>
+              <img src={cars.images} alt={cars.carName} />
+              <div className="flex justify-between items-center flex-wrap font-semibold">
+                <h3>{cars.carName}</h3>
+                <p>{cars.type}</p>
+                <p>Color: {cars.details.color}</p>
+              </div>
+            </div>
+            <div className="mt-4">
+              <p>
+                Rental Duration:{" "}
+                <span className="font-semibold">
+                  {days} {days === 1 ? "day" : "days"}
+                </span>
+              </p>
+              <p>
+                Price per day:{" "}
+                <span className="font-semibold">£{cars.price.perDay}</span>
+              </p>
+              <p>
+                Total Price:{" "}
+                <span className="font-semibold">£{finalPrice}</span>
+              </p>
+            </div>
+            <div className="mt-4">
+              <p>Thank you for choosing our car rental service!</p>
+              <p>Driver Details: </p>
+              <p className="mt-1 font-semibold">
+                {user.firstName} {user.lastName}
+              </p>
+              <p className="font-semibold">{user.email}</p>
+              <p className="mt-4">
+                Your order has been confirmed. We will contact you shortly with
+                further details.
+              </p>
+            </div>
           </div>
-          <div>
-            <p>
-              Rental Duration: {days} {days === 1 ? "day" : "days"}
-            </p>
-            <p>Price per day: £{cars.price.perDay}</p>
-            <p>Total Price: £{finalPrice}</p>
-          </div>
-          <div>
-            <p>Thank you for choosing our car rental service!</p>
-            <p>Driver Details: </p>
-            <p>{user.firstName}</p>
-            <p>{user.lastName}</p>
-            <p>{user.email}</p>
-            <p>
-              Your order has been confirmed. We will contact you shortly with
-              further details.
-            </p>
-          </div>
-        </div>
-      )}
-      <button className="bg-blue-500 text-red-500" onClick={redirect}>
-        Go back to home
-      </button>
+        )}
+        <button
+          className="bg-[#0370EF] w-full h-10 rounded-lg text-white font-semibold mt-4"
+          onClick={redirect}
+        >
+          Go back to home
+        </button>
+      </div>
     </div>
   );
 }

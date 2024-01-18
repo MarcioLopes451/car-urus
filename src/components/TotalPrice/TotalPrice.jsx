@@ -24,7 +24,9 @@ export default function TotalPrice({ price, cars }) {
     }, 0);
   };
 
-  const isInputsEmpty = !email || !first || !last;
+  let emailRegex = /\S+@\S+\.\S+/;
+
+  const isInputsEmpty = !emailRegex.test(email) || !first || !last;
   return (
     <div className="mt-5 mx-[30px]">
       <div className="w-full border border-black rounded-lg p-2">
