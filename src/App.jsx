@@ -3,7 +3,7 @@ import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
 import Cars from "./pages/Cars/Cars";
 import SelectedCar from "./pages/Cars/SelectedCar";
-
+import OrderConfirmed from "./pages/OrderConfirmed/OrderConfirmed";
 function App() {
   return (
     <div>
@@ -11,6 +11,8 @@ function App() {
         <Route path="/car-urus/" element={<Home />} />
         <Route path="/car-urus/cars" element={<Cars />} />
         <Route path="/car-urus/cars/:id" element={<SelectedCar />} />
+
+        <Route path="/car-urus/order-confirmed" element={<OrderConfirmed />} />
       </Routes>
       <Footer />
     </div>

@@ -6,6 +6,7 @@ export const carSlice = createSlice({
   initialState: {
     day: 1,
     cars: carData,
+    selectedCar: null,
     totalPrice: 50,
   },
   reducers: {
@@ -22,6 +23,10 @@ export const carSlice = createSlice({
         car.price.perDay = carData.find((c) => c.id == car.id).price.perDay;
       });
     },
+    selectCar: (state, action) => {
+      const selectedCarID = action.payload;
+      state.selectedCar = state.cars.find((car) => car.id === selectedCarID);
+    },
   },
 });
 
@@ -32,5 +37,6 @@ const newPrice = (price, days) => {
   }
   return newPrice.toFixed(2);
 };
-export const { updatePrice, updateDay, resetPrices } = carSlice.actions;
+export const { updatePrice, updateDay, resetPrices, selectCar } =
+  carSlice.actions;
 export default carSlice.reducer;

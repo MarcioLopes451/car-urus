@@ -3,22 +3,28 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { complete } from "../../features/userSlice";
-import ConfirmOrder from "../ConfirmOrder/ConfirmOrder";
+import { Link, useNavigate } from "react-router-dom";
 
-export default function TotalPrice({ price }) {
+export default function TotalPrice({ price, cars }) {
   const [first, setFirst] = useState("");
   const [last, setLast] = useState("");
   const [email, setEmail] = useState("");
-  const [state, setState] = useState(false);
+  const navigate = useNavigate();
+
   const days = useSelector((state) => state.car.day);
   const dispatch = useDispatch();
 
   const insurance = 50;
   const finalPrice = insurance + parseInt(price, 10);
 
-  const openReviews = () => {
-    setState(!state);
+  const handleContinueToBook = () => {
+    dispatch(complete({ email, firstName: first, lastName: last }));
+    setTimeout(() => {
+      navigate("/car-urus/order-confirmed", { state: { cars, finalPrice } });
+    }, 0);
   };
+
+  const isInputsEmpty = !email || !first || !last;
   return (
     <div className="mt-5 mx-[30px]">
       <div className="w-full border border-black rounded-lg p-2">
@@ -84,18 +90,15 @@ export default function TotalPrice({ price }) {
         </div>
       </div>
       <div className="mt-5 mx-[30px]">
-        <button
-          className="bg-[#0370EF] w-full h-12 rounded-lg text-white font-bold"
-          onClick={() =>
-            dispatch(
-              complete({ email: email, firstName: first, lastName: last })
-            )
-          }
-        >
-          Continue to book
-        </button>
-        <button onClick={openReviews}>hello</button>
-        {state && <ConfirmOrder />}
+        <Link to="/car-urus/order-confirmed">
+          <button
+            className="bg-[#0370EF] w-full h-12 rounded-lg text-white font-bold"
+            onClick={handleContinueToBook}
+            disabled={isInputsEmpty}
+          >
+            Continue to book
+          </button>
+        </Link>
       </div>
     </div>
   );
