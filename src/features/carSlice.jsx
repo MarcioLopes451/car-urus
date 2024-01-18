@@ -4,10 +4,13 @@ import { carData } from "../../data/carData";
 export const carSlice = createSlice({
   name: "car",
   initialState: {
-    day: 1,
     cars: carData,
     selectedCar: null,
+    day: 1,
     totalPrice: 50,
+    pickupDate: "",
+    dropoffDate: "",
+    daysDifference: null,
   },
   reducers: {
     updatePrice: (state, action) => {
@@ -17,6 +20,12 @@ export const carSlice = createSlice({
     },
     updateDay: (state, action) => {
       state.day = action.payload;
+    },
+    updatePickupDate: (state, action) => {
+      state.pickupDate = action.payload;
+    },
+    updateDropoffDate: (state, action) => {
+      state.dropoffDate = action.payload;
     },
     resetPrices: (state) => {
       state.cars.forEach((car) => {
@@ -37,6 +46,13 @@ const newPrice = (price, days) => {
   }
   return newPrice.toFixed(2);
 };
-export const { updatePrice, updateDay, resetPrices, selectCar } =
-  carSlice.actions;
+
+export const {
+  updatePrice,
+  updateDay,
+  updatePickupDate,
+  updateDropoffDate,
+  resetPrices,
+  selectCar,
+} = carSlice.actions;
 export default carSlice.reducer;
