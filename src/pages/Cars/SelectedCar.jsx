@@ -110,7 +110,7 @@ export default function SelectedCar() {
           </div>
         </div>
 
-        <div className="mt-5 mx-[30px]">
+        <div className="mt-5 mx-[30px] md:mx-[60px]">
           <h2 className="font-semibold text-2xl">Perks:</h2>
           <div className="flex justify-between">
             <div className="flex flex-col items-start gap-2">
@@ -125,7 +125,7 @@ export default function SelectedCar() {
           </div>
         </div>
         <TotalPrice price={productData.price.perDay} cars={productData} />
-        <div className="mt-5 mx-[30px]">
+        <div className="mt-5 mx-[30px] md:mx-[60px]">
           <button
             className="bg-[#0370EF] w-40 h-10 rounded-lg text-white font-bold"
             onClick={openReviews}

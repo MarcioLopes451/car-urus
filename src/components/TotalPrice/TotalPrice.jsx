@@ -28,7 +28,7 @@ export default function TotalPrice({ price, cars }) {
 
   const isInputsEmpty = !emailRegex.test(email) || !first || !last;
   return (
-    <div className="mt-5 mx-[30px]">
+    <div className="mt-5 mx-[30px] md:mx-[60px]">
       <div className="w-full border border-black rounded-lg p-2 pb-5 md:w-[300px]">
         <h2 className="font-semibold">Main Driver's Details</h2>
         <div className="mt-3">
