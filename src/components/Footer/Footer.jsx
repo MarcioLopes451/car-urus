@@ -10,7 +10,7 @@ export default function Footer() {
     <div className="mt-5 w-full bg-[#9F4A54] font-Inria-Serif text-white">
       <div className="px-[40px] pt-8 text-center">
         <h2 className="font-bold text-2xl">Car-Urus</h2>
-        <div className="flex items-center justify-between px-[40px] mt-5">
+        <div className="flex items-center justify-between px-[40px] mt-5 md:justify-center md:gap-5">
           <Link to="/">
             <h3 className="font-semibold text-base flex gap-3 items-center">
               {" "}
@@ -23,7 +23,7 @@ export default function Footer() {
             Hotels
           </h3>
         </div>
-        <div className="mt-5 flex items-center justify-between px-[32px]">
+        <div className="mt-5 flex items-center justify-between px-[32px] md:justify-center md:gap-5">
           <img src={Instagram} />
           <img src={Facebook} />
           <img src={X} />

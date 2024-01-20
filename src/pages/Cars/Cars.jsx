@@ -30,7 +30,7 @@ export default function Cars() {
     <>
       <CarNav />
       <div className="mt-5 font-Inria-Serif">
-        <div className="mt-5 mx-[30px]">
+        <div className="mt-5 mx-[30px] md:mx-[60px]">
           <h2 className="font-bold text-2xl">
             Available Cars : {selectedType ? filteredCars.length : cars.length}
           </h2>
@@ -62,17 +62,20 @@ export default function Cars() {
               </div>
             </div>
           </div>
-          <div className=" mt-5 flex flex-col justify-center items-center gap-5 w-full">
+          <div className="mt-10 flex flex-col justify-center items-center gap-5 w-full md:gap-20">
             {selectedType
               ? filteredCars.map((car) => (
                   <div
                     key={car.id}
-                    className="flex justify-between items-start flex-col"
+                    className="flex justify-between items-start flex-col md:flex-row md:gap-5 md:items-center w-full"
                   >
                     <div>
-                      <img src={car.images} className="w-[350px] h-[250px]" />
+                      <img
+                        src={car.images}
+                        className="w-[350px] h-[250px] md:w-[300px] md:h-[220px]"
+                      />
                     </div>
-                    <div className="bg-[#ebebeb] w-full rounded -mt-2 p-2">
+                    <div className="bg-[#ebebeb] w-full rounded -mt-2 p-2 md:w-[320px]">
                       <h3 className="font-semibold text-xl">{car.carName}</h3>
                       <div className="grid grid-rows-4 grid-cols-2 gap-2">
                         <p className="flex gap-2">
@@ -151,12 +154,15 @@ export default function Cars() {
               : cars.map((car) => (
                   <div
                     key={car.id}
-                    className="flex justify-between items-start flex-col"
+                    className="flex justify-between items-start flex-col md:flex-row md:gap-5 md:items-center w-full"
                   >
                     <div>
-                      <img src={car.images} className="w-[350px] h-[250px]" />
+                      <img
+                        src={car.images}
+                        className="w-[350px] h-[250px] md:w-[300px] md:h-[220px]"
+                      />
                     </div>
-                    <div className="bg-[#ebebeb] w-full rounded -mt-2 p-2">
+                    <div className="bg-[#ebebeb] w-full rounded -mt-2 p-2 md:w-[320px]">
                       <h3 className="font-semibold text-xl">{car.carName}</h3>
                       <div className="grid grid-rows-4 grid-cols-2 gap-2">
                         <p className="flex gap-2">

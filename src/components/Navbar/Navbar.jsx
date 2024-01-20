@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <div className="bg-[#9F4A54] w-full text-white font-Inria-Serif z-[1] pb-10">
-      <div className="flex justify-between items-center px-[40px] pt-8">
+    <div className="bg-[#9F4A54] w-full text-white font-Inria-Serif z-[1] pb-10 md:h-[350px]">
+      <div className="flex justify-between items-center px-[40px] pt-8 md:px-[60px]">
         <h1 className="font-bold text-2xl">Car-Urus</h1>
         <img src={User} className="w-[40px] h-[40px]" />
       </div>
       <div className="mt-5">
-        <div className="flex items-center justify-between px-[40px]">
+        <div className="flex items-center justify-between px-[40px] md:justify-start md:gap-10 md:px-[60px]">
           <Link to="/car-urus">
             <h3 className="font-semibold text-base flex gap-3 items-center">
               {" "}
@@ -26,8 +26,8 @@ export default function Navbar() {
         </div>
         <div className="w-full h-[1px] bg-white opacity-50 absolute top-36"></div>
       </div>
-      <div className="mt-10 px-[40px]">
-        <h1 className="font-bold text-2xl">
+      <div className="mt-10 px-[40px] md:px-[60px]">
+        <h1 className="font-bold text-2xl md:w-[300px]">
           Car-urus: Drive the Experience, Rent the Journey.
         </h1>
       </div>

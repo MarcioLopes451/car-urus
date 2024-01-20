@@ -50,7 +50,7 @@ export default function Search() {
 
   const noDate = !pickupDate || !dropoffDate || day < 0;
   return (
-    <div className="-mt-5 z-[2] mx-[40px]">
+    <div className="-mt-5 z-[2] mx-[40px] md:-mt-16 md:mx-[60px]">
       <div className="bg-white w-full border-[#D2B48C] border-[6px] rounded-lg">
         <div className="grid grid-rows-3 grid-cols-2">
           {/*First Row */}
@@ -113,7 +113,7 @@ export default function Search() {
       </div>
       <Link to="/car-urus/cars">
         <button
-          className="bg-[#0370EF] w-full h-10 rounded-lg text-white font-semibold mt-4"
+          className="bg-[#0370EF] w-full h-10 rounded-lg text-white font-semibold mt-4 md:h-20 md:-mt-[5px]"
           onClick={updateRent}
           disabled={noDate}
         >
