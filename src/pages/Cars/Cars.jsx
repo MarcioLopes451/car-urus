@@ -30,7 +30,7 @@ export default function Cars() {
     <>
       <CarNav />
       <div className="mt-5 font-Inria-Serif">
-        <div className="mt-5 mx-[30px] md:mx-[60px]">
+        <div className="mt-5 mx-[30px] md:mx-[60px] lg:mx-[70px]">
           <h2 className="font-bold text-2xl">
             Available Cars : {selectedType ? filteredCars.length : cars.length}
           </h2>
@@ -62,12 +62,12 @@ export default function Cars() {
               </div>
             </div>
           </div>
-          <div className="mt-10 flex flex-col justify-center items-center gap-5 w-full md:gap-20">
+          <div className="mt-10 flex flex-col justify-center items-center gap-5 w-full md:gap-20 lg:flex-row lg:gap-5 h-full flex-wrap lg:justify-between">
             {selectedType
               ? filteredCars.map((car) => (
                   <div
                     key={car.id}
-                    className="flex justify-between items-start flex-col md:flex-row md:gap-5 md:items-center w-full"
+                    className="flex justify-between items-start flex-col md:flex-row md:gap-5 md:items-center w-full lg:flex-col lg:justify-start lg:items-center flex-1"
                   >
                     <div>
                       <img
@@ -154,7 +154,7 @@ export default function Cars() {
               : cars.map((car) => (
                   <div
                     key={car.id}
-                    className="flex justify-between items-start flex-col md:flex-row md:gap-5 md:items-center w-full"
+                    className="flex justify-between items-start flex-col md:flex-row md:gap-5 md:items-center w-full lg:flex-col lg:justify-start lg:items-center flex-1"
                   >
                     <div>
                       <img

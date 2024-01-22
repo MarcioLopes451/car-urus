@@ -15,7 +15,7 @@ export default function OrderConfirmed() {
   return (
     <div>
       <CarNav />
-      <div className="mt-5 mx-[40px] font-Inria-Serif">
+      <div className="mt-5 mx-[40px] font-Inria-Serif lg:mx-[70px]">
         <h2 className="font-bold text-2xl">Confirm Your Order</h2>
         <p>You have selected the following car for rental:</p>
         {cars && (

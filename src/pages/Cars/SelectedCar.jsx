@@ -29,9 +29,9 @@ export default function SelectedCar() {
     <>
       <CarNav />
       <div className="mt-5 font-Inria-Serif">
-        <div className="mt-5 mx-[30px] md:mx-[60px]">
+        <div className="mt-5 mx-[30px] md:mx-[60px] lg:mx-[70px]">
           <h2 className="font-bold text-2xl">Your Car deal</h2>
-          <div className="flex justify-between items-start flex-col md:flex-row md:gap-5 md:items-center w-full mt-5">
+          <div className="flex justify-between items-start flex-col md:flex-row md:gap-5 md:items-center w-full mt-5 lg:justify-normal lg:flex-col lg:items-start">
             <div>
               <img
                 src={productData.images}
@@ -110,9 +110,9 @@ export default function SelectedCar() {
           </div>
         </div>
 
-        <div className="mt-5 mx-[30px] md:mx-[60px]">
+        <div className="mt-5 mx-[30px] md:mx-[60px] lg:mt-20">
           <h2 className="font-semibold text-2xl">Perks:</h2>
-          <div className="flex justify-between">
+          <div className="flex justify-between lg:justify-normal lg:gap-80">
             <div className="flex flex-col items-start gap-2">
               {productData.extraDetails.perks.map((perk) => (
                 <div key={perk} className="flex gap-2 items-center">

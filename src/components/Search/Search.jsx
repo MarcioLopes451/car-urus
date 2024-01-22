@@ -50,11 +50,11 @@ export default function Search() {
 
   const noDate = !pickupDate || !dropoffDate || day < 0;
   return (
-    <div className="-mt-5 z-[2] mx-[40px] md:-mt-16 md:mx-[60px]">
+    <div className="-mt-5 z-[2] mx-[40px] md:-mt-16 md:mx-[60px] lg:mx-[70px]">
       <div className="bg-white w-full border-[#D2B48C] border-[6px] rounded-lg">
-        <div className="grid grid-rows-3 grid-cols-2">
+        <div className="grid grid-rows-3 grid-cols-2 lg:grid-rows-1 lg:grid-cols-6">
           {/*First Row */}
-          <div className="row-span-1 col-span-2 bg-light-blue-300 p-4 border-b-[6px] border-[#D2B48C]">
+          <div className="row-span-1 col-span-2 bg-light-blue-300 p-4 border-b-[6px] border-[#D2B48C] lg:border-r-[6px]">
             <label className="ml-9" htmlFor="location">
               Pick-up Location
             </label>
@@ -78,7 +78,7 @@ export default function Search() {
               />
             </div>
           </div>
-          <div className="row-span-1 col-span p-4 border-[#D2B48C] border-b-[6px]">
+          <div className="row-span-1 col-span p-4 border-[#D2B48C] border-b-[6px] lg:border-r-[6px]">
             <label className="">Pick-up Time</label>
             <div className="flex items-center gap-4 mt-3">
               <input
@@ -89,7 +89,7 @@ export default function Search() {
             </div>
           </div>
           {/* Third Row */}
-          <div className="row-span-1 col-span-1 p-4 border-[#D2B48C] border-r-[6px]">
+          <div className="row-span-1 col-span-1 p-4 border-[#D2B48C] border-r-[6px] lg:border-b-[6px]">
             <label className="">Drop-off Date</label>
             <div className="flex items-center gap-4 mt-3">
               <input
@@ -99,7 +99,7 @@ export default function Search() {
               />
             </div>
           </div>
-          <div className="row-span-1 col-span-1 p-4 border-[#D2B48C]">
+          <div className="row-span-1 col-span-1 p-4 border-[#D2B48C] lg:border-b-[6px]">
             <label className="">Drop-off Time</label>
             <div className="flex items-center gap-4 mt-3">
               <input
