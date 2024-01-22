@@ -29,7 +29,7 @@ export default function TotalPrice({ price, cars }) {
   const isInputsEmpty = !emailRegex.test(email) || !first || !last;
   return (
     <div className="mt-5 mx-[30px] md:mx-[60px] lg:mx-[70px]">
-      <div className="w-full border border-black rounded-lg p-2 pb-5 md:w-[300px] lg:w-[650px]">
+      <div className="w-full border border-black rounded-lg p-2 pb-5 md:w-[300px] lg:w-[450px]">
         <h2 className="font-semibold">Main Driver's Details</h2>
         <div className="mt-3">
           <label className="font-semibold">Email Address:</label>
@@ -69,7 +69,7 @@ export default function TotalPrice({ price, cars }) {
         </div>
       </div>
       <div className="mt-5">
-        <div className="border border-black rounded p-2 md:w-[300px] lg:w-[650px]">
+        <div className="border border-black rounded p-2 md:w-[300px] lg:w-[450px]">
           <h2 className="font-semibold">Terms and Conditions</h2>
           <p>
             By clicking 'Book Now', you are confirming that you have downloaded
@@ -79,7 +79,7 @@ export default function TotalPrice({ price, cars }) {
         </div>
       </div>
       <div className="mt-5">
-        <div className="border border-black rounded p-2 md:w-[300px] md:float-right md:-mt-[525px] lg:-mt-[970px]">
+        <div className="border border-black rounded p-2 md:w-[300px] md:float-right md:-mt-[525px] lg:-mt-[995px]">
           <h2 className="font-bold">Total Price:</h2>
           <p>Car Hire charge: £{price}</p>
           <p>Insurance: £{insurance} </p>
@@ -91,14 +91,14 @@ export default function TotalPrice({ price, cars }) {
           </p>
         </div>
       </div>
-      <div className="mt-5 mx-[30px] md:float-right  md:-mt-[350px] md:mx-0 lg:-mt-[800px]">
+      <div className="mt-5 mx-[30px] md:float-right  md:-mt-[350px] md:mx-0 lg:-mt-[830px]">
         <Link to="/car-urus/order-confirmed">
           <button
-            className="bg-[#0370EF] w-full h-12 rounded-lg text-white font-bold md:w-[300px]"
+            className="bg-[#0370EF] w-full h-12 rounded-lg text-white font-bold md:w-[300px] hover:transition ease-in-out hover:opacity-65"
             onClick={handleContinueToBook}
             disabled={isInputsEmpty}
           >
-            Continue to book
+            Book Now
           </button>
         </Link>
       </div>

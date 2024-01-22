@@ -113,7 +113,7 @@ export default function Search() {
       </div>
       <Link to="/car-urus/cars">
         <button
-          className="bg-[#0370EF] w-full h-10 rounded-lg text-white font-semibold mt-4 md:h-20 md:-mt-[5px]"
+          className="bg-[#0370EF] w-full h-10 rounded-lg text-white font-semibold mt-4 md:h-20 md:mt-[3px] hover:transition ease-in-out hover:opacity-65"
           onClick={updateRent}
           disabled={noDate}
         >

@@ -15,7 +15,7 @@ export default function OrderConfirmed() {
   return (
     <div>
       <CarNav />
-      <div className="mt-5 mx-[40px] font-Inria-Serif lg:mx-[70px]">
+      <div className="text-center md:text-start mt-5 mx-[40px] font-Inria-Serif lg:mx-[70px]">
         <h2 className="font-bold text-2xl">Confirm Your Order</h2>
         <p>You have selected the following car for rental:</p>
         {cars && (
@@ -28,7 +28,7 @@ export default function OrderConfirmed() {
               />
             </div>
             <div>
-              <div className="flex justify-between items-center flex-wrap font-semibold">
+              <div className="flex justify-center items-center flex-wrap font-semibold gap-4 md:justify-between">
                 <h3>{cars.carName}</h3>
                 <p>{cars.type}</p>
                 <p>Color: {cars.details.color}</p>

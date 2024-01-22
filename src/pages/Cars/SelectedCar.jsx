@@ -112,7 +112,7 @@ export default function SelectedCar() {
 
         <div className="mt-5 mx-[30px] md:mx-[60px] lg:mt-20">
           <h2 className="font-semibold text-2xl">Perks:</h2>
-          <div className="flex justify-between lg:justify-normal lg:gap-80">
+          <div className="flex justify-between lg:justify-normal lg:gap-[100px]">
             <div className="flex flex-col items-start gap-2">
               {productData.extraDetails.perks.map((perk) => (
                 <div key={perk} className="flex gap-2 items-center">
@@ -127,7 +127,7 @@ export default function SelectedCar() {
         <TotalPrice price={productData.price.perDay} cars={productData} />
         <div className="mt-5 mx-[30px] md:mx-[60px]">
           <button
-            className="bg-[#0370EF] w-40 h-10 rounded-lg text-white font-bold"
+            className="bg-[#0370EF] w-40 h-10 rounded-lg text-white font-bold hover:transition ease-in-out hover:opacity-65"
             onClick={openReviews}
           >
             Open Reviews

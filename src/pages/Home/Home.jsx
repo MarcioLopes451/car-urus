@@ -83,7 +83,7 @@ export default function Home() {
                     <p className="opacity-70">Price for 1 day</p>
                     <p className="font-bold">£{car.price.perDay}</p>
                     <Link key={car.id} to={`/car-urus/cars/${car.id}`}>
-                      <button className="bg-[#0370EF] w-40 h-10 rounded-lg text-white font-bold">
+                      <button className="bg-[#0370EF] w-40 h-10 rounded-lg text-white font-bold hover:transition ease-in-out hover:opacity-65">
                         View Deal
                       </button>
                     </Link>

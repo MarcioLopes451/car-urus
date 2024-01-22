@@ -27,7 +27,7 @@ export default function Navbar() {
         <div className="w-full h-[1px] bg-white opacity-50 absolute top-36"></div>
       </div>
       <div className="mt-10 px-[40px] md:px-[60px] lg:px-[70px]">
-        <h1 className="font-bold text-2xl md:w-[300px] lg:w-[400px]">
+        <h1 className="font-bold text-2xl md:w-[300px] lg:w-[400px] text-center md:text-start">
           Car-urus: Drive the Experience, Rent the Journey.
         </h1>
       </div>

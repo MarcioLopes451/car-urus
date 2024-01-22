@@ -26,7 +26,11 @@ export default function FrequentQuestions() {
               </p>
               <img src={RightArrow} className="w-[20px]" />
             </div>
-            {open == question.id && <p>{question.answer}</p>}
+            {open == question.id && (
+              <p className="border border-black rounded-lg p-2 w-full my-3">
+                {question.answer}
+              </p>
+            )}
           </div>
         ))}
       </div>

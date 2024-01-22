@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="px-[40px] pt-8 text-center">
         <h2 className="font-bold text-2xl">Car-Urus</h2>
         <div className="flex items-center justify-between px-[40px] mt-5 md:justify-center md:gap-5">
-          <Link to="/">
+          <Link to="/car-urus/">
             <h3 className="font-semibold text-base flex gap-3 items-center">
               {" "}
               <img src={Car} className="w-[30px] h-[30px]" /> Car Rentals
