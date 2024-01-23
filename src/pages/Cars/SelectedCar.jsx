@@ -11,6 +11,7 @@ import Tick from "../../../images/8541612_check_tick_mark_icon.png";
 import Keychain from "../../../images/37052_keychain_password_access_car keys_keys_icon.png";
 import TotalPrice from "../../components/TotalPrice/TotalPrice";
 import { useSelector } from "react-redux";
+import UpdateSearch from "../../components/Search/UpdateSearch";
 
 export default function SelectedCar() {
   const [state, setState] = useState(false);
@@ -28,6 +29,7 @@ export default function SelectedCar() {
   return (
     <>
       <CarNav />
+      <UpdateSearch />
       <div className="mt-5 font-Inria-Serif">
         <div className="mt-5 mx-[30px] md:mx-[60px] lg:mx-[70px]">
           <h2 className="font-bold text-2xl">Your Car deal</h2>

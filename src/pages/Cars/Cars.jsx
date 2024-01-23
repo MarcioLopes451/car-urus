@@ -12,6 +12,7 @@ import Hatchback from "../../../images/4047299_automobile_car_hatch_hatchback_si
 import Sedan from "../../../images/4047317_auto_automobile_car_sedan_transport_icon.png";
 import SUV from "../../../images/4047334_auto_automobile_automotive_car_suv_icon.png";
 import Electric from "../../../images/4047337_car_vehicle_transport_van_icon.png";
+import UpdateSearch from "../../components/Search/UpdateSearch";
 
 export default function Cars() {
   const cars = useSelector((state) => state.car.cars);
@@ -29,6 +30,7 @@ export default function Cars() {
   return (
     <>
       <CarNav />
+      <UpdateSearch />
       <div className="mt-5 font-Inria-Serif">
         <div className="mt-5 mx-[30px] md:mx-[60px] lg:mx-[70px]">
           <h2 className="font-bold text-2xl">

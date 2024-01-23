@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   updatePrice,
@@ -11,7 +10,7 @@ import { selectLocation } from "../../features/locationSlice";
 import { useState, useEffect } from "react";
 import Searching from "../../../images/2931184_normal_regular_zoom_glass_magnifier_icon.png";
 
-export default function Search() {
+export default function UpdateSearch() {
   const cars = useSelector((state) => state.car.cars);
   const day = useSelector((state) => state.car.day);
   const pickupDate = useSelector((state) => state.car.pickupDate);
@@ -22,10 +21,6 @@ export default function Search() {
   const locations = useSelector((state) => state.locations.locations);
   const [time, setTime] = useState("10:10");
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(resetPrices());
-  }, [pickupDate, dropoffDate, dispatch]);
 
   useEffect(() => {
     const difference = calculateDateDifference(pickupDate, dropoffDate);
@@ -40,6 +35,7 @@ export default function Search() {
     return daysDifference;
   };
   const updateRent = () => {
+    dispatch(resetPrices());
     cars.forEach((car) => {
       dispatch(updatePrice({ carId: car.id, days: day }));
     });
@@ -64,7 +60,7 @@ export default function Search() {
     day === 0 ||
     selectedLocation === null;
   return (
-    <div className="-mt-5 z-[2] mx-[40px] md:-mt-16 md:mx-[60px] lg:mx-[70px]">
+    <div className="mx-[40px] md:mx-[60px] lg:mx-[70px] mt-5">
       <div className="bg-white w-full border-[#D2B48C] border-[6px] rounded-lg">
         <div className="grid grid-rows-3 grid-cols-2 lg:grid-rows-1 lg:grid-cols-6">
           {/*First Row */}
@@ -76,7 +72,7 @@ export default function Search() {
                 onChange={handleLocationChange}
                 value={selectedLocation}
               >
-                <option value="">Select a location</option>
+                <option value="">{selectLocation}</option>
                 {locations.map((location) => (
                   <option key={location.value} value={location.value}>
                     {location.label}
@@ -129,16 +125,14 @@ export default function Search() {
           </div>
         </div>
       </div>
-      <Link to="/car-urus/cars">
-        <button
-          className="bg-[#0370EF] w-full h-10 rounded-lg text-white font-semibold mt-4 md:h-20 md:mt-[3px] hover:transition ease-in-out hover:opacity-65"
-          onClick={updateRent}
-          disabled={noDate}
-        >
-          {" "}
-          Search
-        </button>
-      </Link>
+      <button
+        className="bg-[#0370EF] w-full h-10 rounded-lg text-white font-semibold mt-4 md:h-20 md:mt-[3px] hover:transition ease-in-out hover:opacity-65"
+        onClick={updateRent}
+        disabled={noDate}
+      >
+        {" "}
+        Update
+      </button>
     </div>
   );
 }

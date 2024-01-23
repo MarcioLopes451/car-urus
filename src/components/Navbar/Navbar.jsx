@@ -18,11 +18,13 @@ export default function Navbar() {
               <img src={Car} className="w-[30px] h-[30px]" /> Car Rentals
             </h3>
           </Link>
-          <h3 className="font-semibold text-base flex gap-3 items-center">
-            {" "}
-            <img src={Hotel} className="w-[30px] h-[30px]" />
-            Hotels
-          </h3>
+          <Link to="/car-urus/hotel">
+            <h3 className="font-semibold text-base flex gap-3 items-center">
+              {" "}
+              <img src={Hotel} className="w-[30px] h-[30px]" />
+              Hotels
+            </h3>
+          </Link>
         </div>
         <div className="w-full h-[1px] bg-white opacity-50 absolute top-36"></div>
       </div>

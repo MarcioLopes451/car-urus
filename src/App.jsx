@@ -4,14 +4,15 @@ import Home from "./pages/Home/Home";
 import Cars from "./pages/Cars/Cars";
 import SelectedCar from "./pages/Cars/SelectedCar";
 import OrderConfirmed from "./pages/OrderConfirmed/OrderConfirmed";
+import Hotel from "./pages/Hotel/Hotel";
 function App() {
   return (
     <div>
       <Routes>
         <Route path="/car-urus/" element={<Home />} />
         <Route path="/car-urus/cars" element={<Cars />} />
+        <Route path="/car-urus/hotel" element={<Hotel />} />
         <Route path="/car-urus/cars/:id" element={<SelectedCar />} />
-
         <Route path="/car-urus/order-confirmed" element={<OrderConfirmed />} />
       </Routes>
       <Footer />

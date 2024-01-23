@@ -17,11 +17,13 @@ export default function Footer() {
               <img src={Car} className="w-[30px] h-[30px]" /> Car Rentals
             </h3>
           </Link>
-          <h3 className="font-semibold text-base flex gap-3 items-center">
-            {" "}
-            <img src={Hotel} className="w-[30px] h-[30px]" />
-            Hotels
-          </h3>
+          <Link to="/car-urus/hotel">
+            <h3 className="font-semibold text-base flex gap-3 items-center">
+              {" "}
+              <img src={Hotel} className="w-[30px] h-[30px]" />
+              Hotels
+            </h3>
+          </Link>
         </div>
         <div className="mt-5 flex items-center justify-between px-[32px] md:justify-center md:gap-5">
           <img src={Instagram} />
