@@ -7,7 +7,7 @@ import OrderConfirmed from "./pages/OrderConfirmed/OrderConfirmed";
 import Hotel from "./pages/Hotel/Hotel";
 function App() {
   return (
-    <div>
+    <div className="bg-none">
       <Routes>
         <Route path="/car-urus/" element={<Home />} />
         <Route path="/car-urus/cars" element={<Cars />} />
