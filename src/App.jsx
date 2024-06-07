@@ -9,11 +9,11 @@ function App() {
   return (
     <div className="bg-none">
       <Routes>
-        <Route path="/car-urus/" element={<Home />} />
-        <Route path="/car-urus/cars" element={<Cars />} />
-        <Route path="/car-urus/hotel" element={<Hotel />} />
-        <Route path="/car-urus/cars/:id" element={<SelectedCar />} />
-        <Route path="/car-urus/order-confirmed" element={<OrderConfirmed />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/cars" element={<Cars />} />
+        <Route path="/hotel" element={<Hotel />} />
+        <Route path="/cars/:id" element={<SelectedCar />} />
+        <Route path="/order-confirmed" element={<OrderConfirmed />} />
       </Routes>
       <Footer />
     </div>

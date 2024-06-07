@@ -12,13 +12,13 @@ export default function Navbar() {
       </div>
       <div className="mt-5">
         <div className="flex items-center justify-between px-[40px] md:justify-start md:gap-10 md:px-[60px] lg:px-[70px]">
-          <Link to="/car-urus">
+          <Link to="/">
             <h3 className="font-semibold text-base flex gap-3 items-center">
               {" "}
               <img src={Car} className="w-[30px] h-[30px]" /> Car Rentals
             </h3>
           </Link>
-          <Link to="/car-urus/hotel">
+          <Link to="/hotel">
             <h3 className="font-semibold text-base flex gap-3 items-center">
               {" "}
               <img src={Hotel} className="w-[30px] h-[30px]" />
