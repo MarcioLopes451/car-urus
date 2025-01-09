@@ -1,5 +1,5 @@
 <div align="center">
-	<img src="./images/8665128_car_vehicle_icon.png" width="25%">
+	<img src="./images/8665128_car_vehicle_icon.png" width="10%">
   <h1>Car-Urus</h1>
 </div>
 
