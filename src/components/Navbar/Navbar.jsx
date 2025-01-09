@@ -7,18 +7,35 @@ export default function Navbar() {
   return (
     <div className="bg-[#9F4A54] w-full text-white font-Inria-Serif z-[1] pb-10 md:h-[350px] lg:h-[300px]">
       <div className="flex justify-between items-center px-[40px] pt-8 md:px-[60px] lg:px-[70px]">
-        <h1 className="font-bold text-2xl">Car-Urus</h1>
+        <Link
+          to="/car-urus/"
+          onClick={() => {
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+          }}
+        >
+          <h1 className="font-bold text-2xl">Car-Urus</h1>
+        </Link>
         <img src={User} className="w-[40px] h-[40px]" />
       </div>
       <div className="mt-5">
         <div className="flex items-center justify-between px-[40px] md:justify-start md:gap-10 md:px-[60px] lg:px-[70px]">
-          <Link to="/">
+          <Link
+            to="/car-urus/cars"
+            onClick={() => {
+              window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+            }}
+          >
             <h3 className="font-semibold text-base flex gap-3 items-center">
               {" "}
               <img src={Car} className="w-[30px] h-[30px]" /> Car Rentals
             </h3>
           </Link>
-          <Link to="/hotel">
+          <Link
+            to="/car-urus/hotel"
+            onClick={() => {
+              window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+            }}
+          >
             <h3 className="font-semibold text-base flex gap-3 items-center">
               {" "}
               <img src={Hotel} className="w-[30px] h-[30px]" />

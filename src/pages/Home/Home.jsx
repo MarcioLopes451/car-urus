@@ -82,7 +82,17 @@ export default function Home() {
                   <div>
                     <p className="opacity-70">Price for 1 day</p>
                     <p className="font-bold">£{car.price.perDay}</p>
-                    <Link key={car.id} to={`/car-urus/cars/${car.id}`}>
+                    <Link
+                      key={car.id}
+                      to={`/car-urus/cars/${car.id}`}
+                      onClick={() => {
+                        window.scrollTo({
+                          top: 0,
+                          left: 0,
+                          behavior: "smooth",
+                        });
+                      }}
+                    >
                       <button className="bg-[#0370EF] w-40 h-10 rounded-lg text-white font-bold hover:transition ease-in-out hover:opacity-65">
                         View Deal
                       </button>

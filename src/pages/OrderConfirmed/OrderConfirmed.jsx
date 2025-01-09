@@ -11,6 +11,7 @@ export default function OrderConfirmed() {
 
   const redirect = () => {
     window.location.href = "/car-urus/";
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
   return (
     <div>

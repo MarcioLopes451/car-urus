@@ -92,7 +92,12 @@ export default function TotalPrice({ price, cars }) {
         </div>
       </div>
       <div className="mt-5 mx-[30px] md:float-right  md:-mt-[350px] md:mx-0 lg:-mt-[830px]">
-        <Link to="/car-urus/order-confirmed">
+        <Link
+          to="/car-urus/order-confirmed"
+          onClick={() => {
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+          }}
+        >
           <button
             className="bg-[#0370EF] w-full h-12 rounded-lg text-white font-bold md:w-[300px] hover:transition ease-in-out hover:opacity-65"
             onClick={handleContinueToBook}

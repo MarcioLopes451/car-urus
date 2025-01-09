@@ -129,7 +129,12 @@ export default function Search() {
           </div>
         </div>
       </div>
-      <Link to="/car-urus/cars">
+      <Link
+        to="/car-urus/cars"
+        onClick={() => {
+          window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+        }}
+      >
         <button
           className="bg-[#0370EF] w-full h-10 rounded-lg text-white font-semibold mt-4 md:h-20 md:mt-[3px] hover:transition ease-in-out hover:opacity-65"
           onClick={updateRent}
