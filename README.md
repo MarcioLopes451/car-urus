@@ -1,4 +1,7 @@
-## Car-Urus
+<div align="center">
+	<img src="./images/8665128_car_vehicle_icon.png" width="25%">
+  <h1>Car-Urus</h1>
+</div>
 
 Car-Urus is a car rental website that allows users to rent out cars of their choosing. There are many functionalities such as:
 - Picking location
