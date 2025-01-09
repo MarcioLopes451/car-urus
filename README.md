@@ -31,8 +31,8 @@ Clone the repository Install dependencies by running npm install in the project 
 
 ### Selected Rental Car Page 👇
 
-![Selected Rental Car](<./public/screencapture-marciolopes451-github-io-car-urus-cars-2-2025-01-09-20_05_11.png>)
+![Selected Rental Car](<./images/screencapture-marciolopes451-github-io-car-urus-cars-2-2025-01-09-20_05_11.png>)
 
 ### Checkout Page 👇
 
-![Checkout](<./public/screencapture-marciolopes451-github-io-car-urus-order-confirmed-2025-01-09-20_05_21.png>)
+![Checkout](<./images/screencapture-marciolopes451-github-io-car-urus-order-confirmed-2025-01-09-20_05_21.png>)
